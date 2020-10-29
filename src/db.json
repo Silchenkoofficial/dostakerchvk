@@ -1,0 +1,61 @@
+{
+    "orders": [
+        {
+            "id": "00001",
+            "address": [
+                "ул. Горькова 20",
+                "ул. Полевая 5"
+            ],
+            "weight": 10,
+            "product": "Другое",
+            "timeFromAddress1": "13:30",
+            "timeToAddress1": "15:30",
+            "timeFromAddress2": "13:30",
+            "timeToAddress2": "15:30",
+            "price": 526
+        },
+        {
+            "id": "00002",
+            "address": [
+                "ул. Дмитрия Донского 1",
+                "ул. Тенистая 2"
+            ],
+            "weight": 15,
+            "product": "Продукты",
+            "timeFromAddress1": "13:30",
+            "timeToAddress1": "15:30",
+            "timeFromAddress2": "13:30",
+            "timeToAddress2": "17:30",
+            "price": 231
+        },
+        {
+            "id": "00003",
+            "address": [
+                "ул. Ворошилова 4",
+                "ул. Буденного 3",
+                "ул. Блюхера 20"
+            ],
+            "weight": 1,
+            "product": "Горячая еда",
+            "timeFromAddress1": "20:30",
+            "timeToAddress1": "21:00",
+            "timeFromAddress2": "20:30",
+            "timeToAddress2": "22:00",
+            "price": 320
+        },
+        {
+            "id": "00004",
+            "address": [
+                "ул. Комарова 1",
+                "ул. Пушкина 21"
+            ],
+            "weight": 5,
+            "product": "Продукты",
+            "timeFromAddress1": "13:00",
+            "timeToAddress1": "16:00",
+            "timeFromAddress2": "13:00",
+            "timeToAddress2": "17:00",
+            "price": 142
+        }
+    ]
+}
