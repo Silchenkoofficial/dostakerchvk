@@ -16,6 +16,10 @@ function NewOrder() {
         ]);
     }
 
+    const send = () => {
+      alert("Ваш заказ отправлен!");
+    }
+
     return (
       <div className="new-order">
         <HeaderNav />
@@ -42,7 +46,7 @@ function NewOrder() {
         </div>
         <div className="new-order__nav">
           <div className="price">100 ₽</div>
-          <div className="send">Отправить заказ</div>
+          <div className="send" onClick={() => send()}>Отправить заказ</div>
         </div>
       </div>
     );

@@ -1,11 +1,19 @@
 .order-info .container {
   background-color: #e5e5e5;
   padding: 0;
+  min-height: 100vh;
 }
 .order-info .wrapper {
   padding: 10px 20px;
   background-color: #fff;
   margin-bottom: 15px;
+}
+.order-info .wrapper:last-child {
+  margin-bottom: calc(48px + 15px);
+}
+.order-info .label {
+  font-size: 11px;
+  color: #bfbfbf;
 }
 .order-info__disclaimer {
   padding-top: 10px;
@@ -21,6 +29,10 @@
   text-align: center;
   padding: 15px 0;
   border-radius: 100px;
+}
+.order-info .detail-block {
+  display: flex;
+  flex-direction: column;
 }
 .address__header {
   display: flex;
@@ -39,5 +51,36 @@
   font-weight: bold;
 }
 .address__info {
-  margin-left: 35px;
+  margin-left: 15px;
+  padding-left: 20px;
+  border-left: 1px solid #ff5c00;
+}
+.address__info .time {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.address__info .time--text span {
+  font-weight: bold;
+}
+.address__info .address__to {
+  margin-top: 15px;
+}
+.address__info .address__to .address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.address__info .address__to .address--text {
+  font-weight: bold;
+  font-size: 16px;
+}
+.address__info .telephone {
+  margin-top: 15px;
+}
+.address__info .telephone--text {
+  display: block;
+  color: #ff5c00;
+  text-decoration: underline;
 }

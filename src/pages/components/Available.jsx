@@ -17,7 +17,7 @@ import {
 } from "@vkontakte/vkui";
 import {Icon24Cancel, Icon24Done} from '@vkontakte/icons';
 import { OrdersNav } from "./OrdersNav";
-// import EmptyList from "./EmptyList";
+import EmptyList from "./EmptyList";
 import OrderCard from "../../components/OrderCard/OrderCard";
 import OrderInfo from "../../components/OrderInfo/OrderInfo";
 import DB from '../../db.json';
@@ -63,7 +63,7 @@ function Available({ items, activeLink, select, openModal }) {
 
     const modal = (
       <ModalRoot activeModal={openOrderInfo} onClose={modalBack}>
-        <ModalPage onClose={modalBack} id='orderInfo' dynamicContentHeight header={
+        <ModalPage onClose={modalBack} id='orderInfo' header={
           <ModalPageHeader
             left={
               IS_PLATFORM_ANDROID && <PanelHeaderButton onClick={modalBack}><Icon24Cancel /></PanelHeaderButton>
@@ -89,8 +89,8 @@ function Available({ items, activeLink, select, openModal }) {
           </PanelHeaderButton>}>Доступные</PanelHeader>
           <PullToRefresh onRefresh={onRefresh} isFetching={fetching}>
             <OrdersNav activeLink={activeLink} select={select} items={items} />
-            {/* <EmptyList text="Доступных заказов нет" /> */}
-            <div className="container">
+            {
+              data.orders.length === 0 ? <EmptyList text="Доступных заказов нет" /> : <div className="container">
               <Group header={<Header mode="secondary">Сегодня</Header>}>
                 {data.orders.map((item, index) => (
                   <OrderCard
@@ -104,6 +104,8 @@ function Available({ items, activeLink, select, openModal }) {
                 ))}
               </Group>
             </div>
+            }
+            {/* <EmptyList text="Доступных заказов нет" /> */}
           </PullToRefresh>
         </Panel>
       </View>

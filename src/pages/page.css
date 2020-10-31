@@ -202,6 +202,9 @@
 .TabbarItem__text {
   display: none;
 }
+.TabbarItem--selected {
+  color: #ff5c00;
+}
 .TabbarItem--selected .TabbarItem__icon {
   transform: scale(1);
 }

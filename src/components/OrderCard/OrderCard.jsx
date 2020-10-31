@@ -12,13 +12,13 @@ function OrderCard({data, onClick}) {
             Адресов: <span>{data.address.length}</span>
           </div>
           <div className="card__time">
-            Приехать: с <span>{data.timeFromAddress1}</span> до <span>{data.timeToAddress1}</span>
+            Приехать: с <span>{data.address[0].timeFrom}</span> до <span>{data.address[0].timeTo}</span>
           </div>
           <div className="card__address">
-            <div className="card__address1">{data.address[0]}</div>
+            <div className="card__address1">{data.address[0].text}</div>
             {data.address.length > 2 && <span>...</span>}
             <div className="card__address2">
-              {data.address[data.address.length - 1]}
+              {data.address[data.address.length - 1].text}
             </div>
           </div>
           <div className="card__product">
